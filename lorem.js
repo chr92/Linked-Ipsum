@@ -1,0 +1,34 @@
+function generate(length) {
+
+  words = new Array ("motivated", "professional", "synergy", "passionate", "creative", "driven", "extensive experience", "responsible", "track record", "organizational", "change", "change management", "manager", "managed", "focus", "focussed", "10 years", "proven", "function", "dedicated", "sustainable", "focus", "energetic", "energy", "drive", "passion", "approachable", "friendly", "result focussed", "eye for detail", "detail oriented", "advantage", "advertisement", "advice", "agenda", "budget", "authority", "competition", "competitor", "customer", "customer", "customer", "deficit", "delivery", "distribution", "estimate", "fedback", "goal", "KPI", "OKR", "goals", "growth", "hockey stick", "improvement", "personal brand", "personal development", "inventory", "limit", "loss", "margin", "market", "message", "communication", "communicate", "payment", "permission", "profit", "promotion", "process", "kanban", "lean", "growth hacker", "sales", "stock", "signature", "target", "turnover", "accept", "add", "admit", "advertise", "advise", "afford", "approve", "authorize", "avoid", "borrow", "build", "buy", "calculate", "cancel", "change", "charge", "check", "choose", "complain", "complete", "confirm", "consider", "convince", "count", "decide", "decrease", "deliver", "develop", "discount", "dismiss", "dispatch", "distribute", "divide", "employ", "encourage", "establish", "estimate", "exchange", "extend", "fix", "fund", "improve", "increase", "inform", "install", "invest", "invoice", "join", "lend", "lengthen", "lower", "maintain", "manage", "measure", "mention", "obtain", "order", "organize", "owe", "own", "pack", "participate", "pay", "plan", "present", "prevent", "process", "produce", "promise", "promote", "provide", "purchase", "raise", "reach", "receive", "recruit", "reduce", "refuse", "reject", "remind", "remove", "reply", "resign", "respond", "return", "rise", "sell", "send", "separate", "shorten", "split", "structure", "succeed", "suggest", "analytics", "ballpark figures", "bandwidth", "B2B", "B2C", "best of breed", "best practice", "brick-and-mortar", "building capabilities", "circle back", "client-centric", "cloud computing", "close the loop", "co-opetition", "come-to-Jesus moment", "content marketing", "core competency", "creative", "customer-centric", "deep dive", "downsizing", "drill down", "drinking the Kool-Aid", "early-stage", "eating my own dogfood", "enable", "entitlement", "enterprise", "event horizon", "fulfilment issues", "Generation Y", "Generation X", "Generation Z", "granular", "herding cats", "holistic", "hyperlocal", "innovation", "innovative", "leverage", "logistics", "unfair advantage", "long tail", "low hanging fruit", "make it pop", "mindshare", "mission critical", "management visibility", "new economy", "next generation", "offshoring", "pain point", "paralysis by analysis", "Part of my DNA", "peel back the onion", "profit center", "quick-win", "return on investment", "seamless", "short runway", "silo", "social currency", "socialize", "solution", "sustainability", "storytelling", "startup", "strategy", "take offline", "touch base", "touchpoint", "upselling", "upcycling", "value-added", "visibility", "actionable", "authored", "cross-functional", "customer-centric", "dynamic", "in the loop", "innovative", "geographically dispersed", "granular", "high-level", "holistic", "nimble", "off the shelf", "results-driven", "revolutionary", "robust", "scalable", "seamless", "superior", "sustainable", "thoughtful", "user-centric", "win-win", "50,000 foot view", "30,000 foot view", "assessment", "bandwidth", "benchmarking", "best practice", "tried and tested", "best practice methodology", "bottleneck", "blue sky thinking", "cascade", "change", "check in the box", "chit chat", "compensation actions", "competitive advantage", "conflict resolution", "constraints", "core competencies", "core values", "cost avoidance", "cost reduction", "cost transformation", "critical thinker", "cutting edge practices", "dashboard", "deliverable", "diagnosis", "downsize", "excellence", "flavor of the month", "fire fighter", "game changer", "game theory", "gatekeeper", "golden handshake", "golden parachute", "governance", "headhunted", "hub", "income pressures", "joined-up thinking", "individual contributor", "leadership", "lean forward", "learning experience", "line of sight", "low-hanging fruit", "mad as a hornet", "mastery", "matrix organization", "metrics", "momentum", "moving target", "nesting", "not invented here", "initiative", "individual contributor", "operational excellence", "outcomes", "paradigm shift", "partnership", "positive Momentum", "practical application", "process", "recommendation", "requirements", "revenue growth", "revenue mix", "rightsize", "seat at the table", "showcase", "show stopper", "talent", "tent pole", "Six Sigma", "silver bullet", "stakeholders", "standards", "state of the art", "teamwork", "thought leader", "touchpoints", "under-pinning", "womb to tomb", "action", "attract", "baked in", "boil the ocean", "build capacity", "call out", "capture", "champion", "circle back", "circle the wagons", "collaborative", "connect the dots", "cover all directions of the compass", "deliver", "dialogue", "differentiate", "drill down", "drink the Kool Aid", "emerging", "enhance", "escalate", "evolve", "execute", "exploit", "facilitate", "forge", "foster", "generate", "grow", "highlight", "ideate", "impact", "implement", "incentivize", "inspire", "integrate", "intervene", "land and expand", "leverage", "manage", "mature", "monetize", "move forward", "onboarding", "partner", "pick the low-hanging fruit", "ping", "power to the elbow", "pushing the envelope", "reach out", "re-engineer", "re-use", "scale up", "simplify", "singing from the same hymn sheet", "snap a pool cue", "spearhead", "strategic plan", "strategize", "stratic", "sugarcoating", "synergize", "table it", "tackle", "think outside the box", "throw a curve", "touch base", "transform", "tread lightly", "unify", "utilize", "vet");
+
+  var output = "";
+  var numberOfWords = words.length;
+
+  for (x=0; x < length; x++) {
+    output += "<p>";
+    var paragraphLength = 10 + Math.floor(Math.random()*50);
+    for(i=0; i < paragraphLength; i++) {
+      if (i == 0) {
+        random = Math.floor(Math.random()*numberOfWords);
+        firstWord = words[random];
+        firstWord = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
+        output += firstWord;
+      } else if(i % 3 == 0) {
+        output += ". ";
+        random = Math.floor(Math.random()*numberOfWords);
+        nextWord = words[random];
+        nextWord = nextWord.charAt(0).toUpperCase() + nextWord.slice(1);
+        output += nextWord;
+      } else {
+        random = Math.floor(Math.random()*numberOfWords);
+        output += " " + words[random];
+      }
+
+    }
+    output += ".</p>";
+  }
+
+  return output;
+
+};
