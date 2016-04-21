@@ -21,6 +21,9 @@
       .col-md-6 {
         padding-top: 1.5em;
       }
+      #signoff {
+        padding-top: 1em;
+      }
     </style>
 
 </head>
@@ -38,21 +41,24 @@
     <div class="container" id="controls">
         <div class="row" id="input">
             <div class="col-md-6">
+                <p>It's time for business. Synergise your online profile with some result focused speak.</br>Peel back the onion to get your return on Investment!</p>
                 <form onsubmit="event.preventDefault();return replaceText()">
                   <fieldset class="form-group">
-                    <label for="LengthInput">Paragraphs</label>
+                    <label for="LengthInput">How many paragraphs?</label>
                     <select class="form-control" id="LengthInput">
                       <option>1</option>
-                      <option>2</option>
+                      <option selected="selected">2</option>
                       <option>3</option>
                       <option>4</option>
+                      <option>5</option>
                     </select>
                   </fieldset>
-                  <button type="submit" class="btn btn-primary">Generate</button>
+                  <button type="submit" class="btn btn-primary">Connect the dots.</button>
                 </form>
+                <p id="signoff"><a href="http://www.twitter.com/chendriksen">Drink the Kool-Aid</a>.</p>
             </div>
             <div class="col-md-6" id="output">
-                <p>Business, game theory strategy choose produce, lend core competency best practice facilitate, raise under-pinning seamless bottleneck, hockey stick downsize change mature, reach out game changer pick the low-hanging fruit drill down, B2C tried and tested process evolve, circle back function brick-and-mortar sustainability, lean accept flavor of the month golden parachute, organize focus.</p>
+              
             </div>
         </div>
     </div>
